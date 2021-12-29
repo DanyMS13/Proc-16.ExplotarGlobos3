@@ -87,15 +87,18 @@ arrowGroup.destroy;
 score = score + 3
  }
 
+   
  if (arrowGroup.isTouching (blueB)){
-  blueB.destroy;
-  arrowGroup.destroy;
+   //le faltaba Each() a la línea 93 y 94 Dani :)
+  blueB.destroyEach();
+  arrowGroup.destroyEach();
   score = score + 2
    }
 
 if (arrowGroup.isTouching(pinkB)){
-    pinkB.destroy;
-    arrowGroup.destroy;
+  //le faltaba Each() a la línea 100 y 101 Dani :)
+    pinkB.destroyEach();
+    arrowGroup.destroy();
     score = score + 1
    } 
 
@@ -157,3 +160,4 @@ function pinkBalloon() {
   arrowGroup.add(arrow);
    
 }
+ 
